@@ -20,6 +20,9 @@ else:
     
 haberler=c.fetchall()
 
+if len(haberler)==0:
+    st.warning("Herhangi Bir Haber bulunamadı")
+
 for i in range(0,len(haberler),3):
     col1,col2,col3=st.columns(3)
 
