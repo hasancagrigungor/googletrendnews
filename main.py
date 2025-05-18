@@ -14,7 +14,17 @@ c=conn.cursor()
 c.execute("SELECT * FROM haberler ORDER BY trend_id DESC LIMIT 99")
 haberler=c.fetchall()
 
-for i in range(len(haberler)):
-    st.image(haberler[i][3])
-    st.write(haberler[i][1])
-    st.link_button("Habere Git",haberler[i][2])
+for i in range(0,len(haberler,3)):
+    col1,col2,col3=st.columns(3)
+    with col1:
+        st.image(haberler[i][3])
+        st.write(haberler[i][1])
+        st.link_button("Habere Git",haberler[i][2])
+    with col2:
+        st.image(haberler[i+1][3])
+        st.write(haberler[i+1][1])
+        st.link_button("Habere Git",haberler[i+1][2])
+    with col2:
+        st.image(haberler[i+2][3])
+        st.write(haberler[i+2][1])
+        st.link_button("Habere Git",haberler[i+2][2])
