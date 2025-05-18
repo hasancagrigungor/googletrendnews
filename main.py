@@ -14,7 +14,7 @@ c=conn.cursor()
 c.execute("SELECT * FROM haberler ORDER BY trend_id DESC LIMIT 99")
 haberler=c.fetchall()
 
-for i in range(haberler):
+for i in range(len(haberler)):
     st.image(haberler[i][3])
     st.write(haberler[i][1])
     st.link_button("Habere Git",haberler[i][2])
