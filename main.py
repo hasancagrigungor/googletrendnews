@@ -8,7 +8,7 @@ from google import genai
 from pydantic import BaseModel
 from fonksiyonlar import trendgetir
 
-diller=["TR","DE","IT","KR","FR","NL,"DK"]
+diller=["TR","DE","IT","KR","FR","NL","DK"]
 
 guncelle=st.sidebar.button("Haberleri Güncelle")
 
